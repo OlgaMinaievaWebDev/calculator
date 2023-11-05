@@ -87,12 +87,12 @@ body {
   box-shadow: inset 2px 3px 5px 0px rgba(0, 0, 0, 0.7);
   outline: none;
 }
-.calculator-display .userInput {
+.calculator-display .previous {
   font-size: 1.325rem;
   font-weight: 400;
   color: #60a07f;
 }
-.calculator-display .result {
+.calculator-display .current {
   font-size: 1.625rem;
   font-weight: 600;
   color: white;
