@@ -2,6 +2,12 @@ const display = document.querySelector(".display");
 const buttons = document.querySelectorAll("button");
 const clear = document.getElementById("clear-btn");
 
+//global variables
+let firstValue = 0;
+let operatorValue = '';
+let awaitingNextValue = false;
+
+//display number
 function sendNumberValue(number) {
   let displayValue = display.textContent;
   display.textContent = displayValue === "0" ? number : displayValue + number;
@@ -15,11 +21,11 @@ buttons.forEach((button) => {
     });
   } else if (button.classList.contains("operators")) {
     button.addEventListener("click", function () {
-      sendNumberValue(button.value);
+      useOperator();
     });
   } else if (button.classList.contains("decimal")) {
     button.addEventListener("click", function () {
-      sendNumberValue();
+      addDecimal();
     });
   }
 });
@@ -30,3 +36,16 @@ function resetAll() {
 }
 
 clear.addEventListener("click", resetAll);
+
+//Add Decimal
+function addDecimal() {
+  if (!display.textContent.includes(".")) {
+    display.textContent = `${display.textContent}.`;
+  }
+}
+
+//operators function
+
+function useOperator() {
+  
+}
