@@ -66,7 +66,7 @@ body {
   background-color: rgb(177, 197, 122);
 }
 
-.calculator-buttons .reset {
+.calculator-buttons #clear-btn {
   background-color: orangered;
 }
 
