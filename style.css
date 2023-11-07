@@ -6,7 +6,6 @@
 body {
   background-color: #749e89;
   text-align: center;
-  width: 100vw;
   height: 100vh;
 }
 
@@ -16,6 +15,7 @@ body {
 }
 
 .calculator {
+  min-width: 400px;
   width: 30%;
   height: 80%;
   display: flex;
@@ -97,4 +97,11 @@ body {
   font-size: 1.625rem;
   font-weight: 600;
   color: white;
+  overflow-x: auto;
+}
+
+@media screen and(max-width: 600px) {
+  .calculator {
+    width: 25%;
+  }
 }
